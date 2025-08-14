@@ -5,7 +5,8 @@ using UnityEngine;
 public class Spieler : MonoBehaviour
 {
     
-    public float Speed = 3f;
+    public float Geschwindigkeit = 3f;
+    public float Sprungkraft = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,22 +19,18 @@ public class Spieler : MonoBehaviour
     {
         if (Input.GetKey("up"))
         {
-            transform.Translate(Vector2.up * Speed * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.up * Sprungkraft * Time.deltaTime, Space.World);
         }
 
-        if (Input.GetKey("down"))
-        {
-            transform.Translate(Vector2.down * Speed * Time.deltaTime, Space.World);
-        }
 
         if (Input.GetKey("right"))
         {
-            transform.Translate(Vector2.right * Speed * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.right * Geschwindigkeit * Time.deltaTime, Space.World);
         }
 
         if (Input.GetKey("left"))
         {
-            transform.Translate(Vector2.left * Speed * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.left * Geschwindigkeit * Time.deltaTime, Space.World);
         }
     }
 

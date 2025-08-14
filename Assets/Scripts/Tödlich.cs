@@ -8,6 +8,7 @@ public class Tödlich : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Etwas wurde von einem Tödlichen Objekt getroffen");
             Destroy(other.gameObject);
         }
     }
